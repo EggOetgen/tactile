@@ -1,0 +1,3 @@
+ofxImGui-master
+ofxOpenCv
+ofxOsc

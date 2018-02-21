@@ -1,0 +1,177 @@
+<?xml version="1.0"?>
+<WekiInputHelperFileData>
+  <oscReceivePort>12344</oscReceivePort>
+  <oscSendPort>6001</oscSendPort>
+  <sendHostname>localhost</sendHostname>
+  <sendOscMessage>/wekCent</sendOscMessage>
+  <inputs>
+    <oscMessage>/cent</oscMessage>
+    <numInputs>2</numInputs>
+    <groupName>Inputs</groupName>
+    <inputNames>
+      <string>cent_1</string>
+      <string>cent_2</string>
+    </inputNames>
+  </inputs>
+  <outputs>
+    <outputs class="linked-list">
+      <wekiinputhelper.Modifiers.ExpressionInput>
+        <name>vx</name>
+        <expression class="expr.BinaryExpr">
+          <variablesUsed>
+            <string>cent_1[n-4]</string>
+            <string>cent_1[n-2]</string>
+            <string>cent_1</string>
+          </variablesUsed>
+          <rator>3</rator>
+          <rand0 class="expr.BinaryExpr">
+            <rator>0</rator>
+            <rand0 class="expr.BinaryExpr">
+              <rator>1</rator>
+              <rand0 class="expr.Variable">
+                <name>cent_1</name>
+                <val>0.0</val>
+              </rand0>
+              <rand1 class="expr.Variable">
+                <name>cent_1[n-2]</name>
+                <val>0.0</val>
+              </rand1>
+            </rand0>
+            <rand1 class="expr.BinaryExpr">
+              <rator>1</rator>
+              <rand0 class="expr.Variable" reference="../../rand0/rand1"/>
+              <rand1 class="expr.Variable">
+                <name>cent_1[n-4]</name>
+                <val>0.0</val>
+              </rand1>
+            </rand1>
+          </rand0>
+          <rand1 class="expr.LiteralExpr">
+            <v>2.0</v>
+          </rand1>
+        </expression>
+        <variables>
+          <expr.Variable reference="../../expression/rand0/rand1/rand1"/>
+          <expr.Variable reference="../../expression/rand0/rand0/rand1"/>
+          <expr.Variable reference="../../expression/rand0/rand0/rand0"/>
+        </variables>
+        <indexedVariables>
+          <wekiinputhelper.Modifiers.IndexedVar>
+            <originalVariable>cent_1[n-4]</originalVariable>
+            <unindexedName>cent_1</unindexedName>
+            <delay>4</delay>
+          </wekiinputhelper.Modifiers.IndexedVar>
+          <wekiinputhelper.Modifiers.IndexedVar>
+            <originalVariable>cent_1[n-2]</originalVariable>
+            <unindexedName>cent_1</unindexedName>
+            <delay>2</delay>
+          </wekiinputhelper.Modifiers.IndexedVar>
+          <wekiinputhelper.Modifiers.IndexedVar>
+            <originalVariable>cent_1</originalVariable>
+            <unindexedName>cent_1</unindexedName>
+            <delay>0</delay>
+          </wekiinputhelper.Modifiers.IndexedVar>
+        </indexedVariables>
+        <indexes>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+        </indexes>
+        <originalString>((cent_1-cent_1[n-2])+(cent_1[n-2]-cent_1[n-4]))/2</originalString>
+        <buffersForInputs>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>5</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+        </buffersForInputs>
+      </wekiinputhelper.Modifiers.ExpressionInput>
+      <wekiinputhelper.Modifiers.ExpressionInput>
+        <name>vy</name>
+        <expression class="expr.BinaryExpr">
+          <variablesUsed>
+            <string>cent_2[n-2]</string>
+            <string>cent_2</string>
+            <string>cent_2[n-4]</string>
+          </variablesUsed>
+          <rator>3</rator>
+          <rand0 class="expr.BinaryExpr">
+            <rator>0</rator>
+            <rand0 class="expr.BinaryExpr">
+              <rator>1</rator>
+              <rand0 class="expr.Variable">
+                <name>cent_2</name>
+                <val>0.0</val>
+              </rand0>
+              <rand1 class="expr.Variable">
+                <name>cent_2[n-2]</name>
+                <val>0.0</val>
+              </rand1>
+            </rand0>
+            <rand1 class="expr.BinaryExpr">
+              <rator>1</rator>
+              <rand0 class="expr.Variable" reference="../../rand0/rand1"/>
+              <rand1 class="expr.Variable">
+                <name>cent_2[n-4]</name>
+                <val>0.0</val>
+              </rand1>
+            </rand1>
+          </rand0>
+          <rand1 class="expr.LiteralExpr">
+            <v>2.0</v>
+          </rand1>
+        </expression>
+        <variables>
+          <expr.Variable reference="../../expression/rand0/rand0/rand1"/>
+          <expr.Variable reference="../../expression/rand0/rand0/rand0"/>
+          <expr.Variable reference="../../expression/rand0/rand1/rand1"/>
+        </variables>
+        <indexedVariables>
+          <wekiinputhelper.Modifiers.IndexedVar>
+            <originalVariable>cent_2[n-2]</originalVariable>
+            <unindexedName>cent_2</unindexedName>
+            <delay>2</delay>
+          </wekiinputhelper.Modifiers.IndexedVar>
+          <wekiinputhelper.Modifiers.IndexedVar>
+            <originalVariable>cent_2</originalVariable>
+            <unindexedName>cent_2</unindexedName>
+            <delay>0</delay>
+          </wekiinputhelper.Modifiers.IndexedVar>
+          <wekiinputhelper.Modifiers.IndexedVar>
+            <originalVariable>cent_2[n-4]</originalVariable>
+            <unindexedName>cent_2</unindexedName>
+            <delay>4</delay>
+          </wekiinputhelper.Modifiers.IndexedVar>
+        </indexedVariables>
+        <indexes>
+          <int>1</int>
+          <int>1</int>
+          <int>1</int>
+        </indexes>
+        <originalString>((cent_2-cent_2[n-2])+(cent_2[n-2]-cent_2[n-4]))/2</originalString>
+        <buffersForInputs>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>5</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+        </buffersForInputs>
+      </wekiinputhelper.Modifiers.ExpressionInput>
+    </outputs>
+    <numOutputTypes>2</numOutputTypes>
+    <dimensionality>2</dimensionality>
+    <hasDependencies>false</hasDependencies>
+  </outputs>
+  <inputTriggerer class="wekiinputhelper.TriggerOnReceive">
+    <c>
+      <type>NONE</type>
+      <howLong>ONCE</howLong>
+      <index>0</index>
+      <val>0.0</val>
+      <appliesTo>INPUT</appliesTo>
+    </c>
+  </inputTriggerer>
+  <isSendingOriginalInputs>false</isSendingOriginalInputs>
+</WekiInputHelperFileData>
